@@ -54,6 +54,7 @@ header{
 
 .menu-celular{
     display: none;
+    text-align: center;
 }
 
 .cont-header{
@@ -103,6 +104,11 @@ nav a:hover::after{
     content: " ";
     width: 100%;
     height: 1px;
+}
+
+.menu-celular .active::after{
+    width: 55%;
+    left: 20px;
 }
 
 i.menu-h{
@@ -201,25 +207,32 @@ i.menu-h{
     justify-content: center;
     align-items: center;
     color: white;
-    text-decoration: none;    
+    text-decoration: none;
+    transition: .4s;   
+}
+
+.scroll:hover{
+    color: #00bbc5;
 }
 
 #seta{
-    width: 30px;
-    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    margin-left: 5px;
     animation-name: move;
     animation-duration: 0.3s;
     animation-iteration-count:infinite ;
     position: relative;
     animation-direction: alternate; 
     animation-timing-function: ease-in;
-    
 }
 
 
 @keyframes move{
     from{top: 0px; }
-    to{top: 3px;}
+    to{top: 3px; color: #00bbc5; }
 }
 
 
@@ -334,8 +347,12 @@ i.menu-h{
     max-width: 1050px;
 }
 
+.projetos{
+    max-width: 386px;
+}
+
 .projetos img{
-    width: 386px;
+    width: 100%;
     border-left: #00d2df solid 4px;
     cursor: pointer;
     transition: 0.8s;
@@ -411,7 +428,11 @@ footer{
    color: rgba(101, 24, 180, 1)
 }
 
-
+@media(max-width:370px){
+    .txt-ex h1{
+        font-size: 16px;
+    }
+}
 
 @media(max-width:865px){
 
@@ -424,10 +445,6 @@ footer{
         gap: 20px 0px;
         flex-direction: column;
         margin-top: 40px;
-    }
-
-    .logo{
-        align-self: flex-start;
     }
     
     .conteiner-i{
@@ -463,6 +480,7 @@ footer{
         display: flex;
         flex-direction: column;
         align-items: center;
+        text-align: center;
     }
 
     .scroll{
@@ -486,9 +504,17 @@ footer{
     .sobre-mim-conteiner{
         margin-left: 0px;
     }
+
+    .sobre-mim-conteiner h1{
+        margin-top: 16px;
+    }
    
     
 }
+
+
+
+
 
 
 
